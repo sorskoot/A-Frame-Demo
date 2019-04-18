@@ -1,0 +1,24 @@
+{
+  "name": "a-frame-demo",
+  "version": "1.0.0",
+  "description": "Demo for an WebVR Talk",
+  "main": "component.js",
+  "dependencies": {},
+  "devDependencies": {
+    "http-server": "^0.11.1"
+  },
+  "scripts": {
+    "start": "http-server . -p 1234"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sorskoot/A-Frame-Demo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sorskoot/A-Frame-Demo/issues"
+  },
+  "homepage": "https://github.com/sorskoot/A-Frame-Demo#readme"
+}

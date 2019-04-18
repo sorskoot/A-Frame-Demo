@@ -1,0 +1,67 @@
+{
+    "A-Frame Script Reference":{
+        "prefix": "demo-aframe:src",
+        "body": "<script src=\"https://aframe.io/releases/0.9.1/aframe.min.js\"></script>",
+        "description": "Script reference to A-Frame",
+        "scope": "html"
+    },
+    "Assets with crate texture":{
+        "prefix": "demo-aframe:assets",
+        "body": ["<a-assets>",
+                 "  <img id=\"crate-texture\" src=\"Textures/Create.jpg\">", 
+                 "</a-assets>"],
+        "description": "Asset block with crate texture",
+        "scope": "html"
+    },
+    "Cursor":{
+        "prefix": "demo-aframe:cursor",
+        "body":[ 
+            "<a-entity cursor=\"fuse: true; fuseTimeout: 500\"",
+            "position=\"0 0 -1\"",
+            "geometry=\"primitive: ring; radiusInner: 0.02; radiusOuter: 0.03\"",
+            "material=\"color: orange; shader: flat\">"],
+        "description": "Create a basic cursor",
+        "scope": "html"
+    },
+    // "a-asset-item":{
+	// 	"prefix": "demo-aframe:a-asset-item",
+	// 	"body": "<a-asset-item id=\"$1\" src=\"$2\"></a-asset-item>",
+    //     "description": "a-asset-item",
+    //     "scope": "html"
+    // },
+
+    "A-Frame component": {
+		"prefix": "demo-aframe:component",
+		"body": [
+			"AFRAME.registerComponent('${1:component}', {",
+			"   schema: {},",
+			"   init: function () { },",
+			"   update: function () { },",
+			"   tick: function () { },",
+			"   remove: function () { },",
+			"   pause: function () { },",
+			"   play: function () { },",
+			"});"
+		],
+        "description": "A-Frame component",
+        "scope":"javascript"
+    },
+    "A-Frame click component":{
+        "prefix": "demo-aframe:click-component",
+        "body": [
+            "AFRAME.registerComponent('s-click', {",
+            "    schema: {",
+            "        color: {default: 'green'}",
+            "      },",
+            "    ",
+            "      init: function () {       ",
+            "          this.el.addEventListener('click',() => {",
+            "                 this.el.setAttribute('material', 'color', this.data.color);",
+            "          })",
+            "      }",
+            "    ",
+            "});"],
+        "description": "Example A-Frame click component ",
+        "scope":"javascript"
+    }
+}

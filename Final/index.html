@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Aframe-demo</title>
+    <script src="https://aframe.io/releases/0.9.1/aframe.min.js"></script>
+  
+    <script src="component.js"></script>
+</head>
+
+<body>
+    <a-scene>
+        <a-assets>
+            <img id="crate-texture" src="Textures/Create.jpg">
+        </a-assets>
+
+        <a-box src="#crate-texture" position="1 0 -5"></a-box>
+        <a-sphere 
+                s-click="color:violet" 
+                color="#33FF88" position="-1 0 -5"></a-sphere>
+        
+        <a-sky color="#55bbff"></a-sky>
+
+        <a-camera position="0 1.6 0">
+                <a-entity cursor="fuse: true; fuseTimeout: 500"
+                          position="0 0 -1"
+                          geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03"
+                          material="color: orange; shader: flat">
+          </a-entity>        
+        </a-camera>
+    </a-scene>
+</body>
+
+</html>
